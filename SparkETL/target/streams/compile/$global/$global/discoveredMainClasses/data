@@ -1,1 +1,0 @@
-["com.rh.bi.etl.spark.QueryBuilder","com.rh.bi.etl.spark.SparkSQLAlter","com.rh.bi.etl.spark.SparkSQLRunner","com.rh.bi.etl.spark.dataCleanupService","com.rh.bi.etl.spark.dataPrepService","com.rh.bi.etl.spark.dataPublishService"]
