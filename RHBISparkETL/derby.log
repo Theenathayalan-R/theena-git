@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri May 11 10:46:23 CDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0163-4fe1-b8cf-00000d884c40 
+on database directory /Users/theena/Java-Code/RHBISparkETL/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@329a1f8d 
+Loaded from file:/Users/theena/.ivy2/cache/org.apache.derby/derby/jars/derby-10.10.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_161-b12
+user.dir=/Users/theena/Java-Code/RHBISparkETL
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
