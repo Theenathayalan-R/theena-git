@@ -1,1 +1,77 @@
-Hi
+return function() {
+
+var f = function() {};
+
+f.version = "1";
+
+//f.supported= function() { visualType= "map";  };
+
+f.settings = function() {
+        return [
+            {
+                id: 'Column Name',
+                defaultValue: 'RAG Status',
+            },
+             {
+                id: 'Blue Color',
+                defaultValue: '#0000ff',
+            },
+             {
+                id: 'Green Color',
+                defaultValue: '#00ff00',
+            },
+             {
+                id: 'Amber Color',
+                defaultValue: '#ff9900',
+            },
+             {
+                id: 'Red Color',
+                defaultValue: '#ff0000',
+            }
+        ];
+    };  
+
+f.afterDraw = function() {
+     var heat = d3.selectAll("#" + arcapi.chartId() + " .g:nth-child(odd)");
+       heat.style("fill", "blue");
+};
+
+f.afterDraw = function() {
+   //Arcadia API to get result set and use to manipulate visual
+    var d = arcapi.dataResult();
+    var rows = d.rows();
+    if (rows.length === 0) {
+        return;
+    }
+    
+       // var ilen = $('#' + arcapi.chartId() + ' .viz-base-legend-g.small-legend').children('text').length;
+
+                      console.log( $('#' + arcapi.chartId() + ' .viz-map-path'));
+                     // console.log("Chart ID:"+ $(arcapi.chartId().getElementsByClass("arc-viz-type-map"));
+                      console.log("Columns1"+ arcapi.dataResult().columns()[0].colname());
+                     console.log("Columns2"+ arcapi.dataResult().columns()[1].colname());
+                      //console.log("Data:"+ row[1][1]);
+       rows.forEach(function(d, i) {
+       
+       
+                      console.log(i+"Country:"+ d[0]+ " Count:"+ d[1]);
+
+if (d[0]=='USA' ) {  
+   console.log("I am USA:"+ d[1]);
+var heat = d3.select("#" + arcapi.chartId() + " .g.path:nth-child(odd)"); 
+       heat.style("fill", "blue");
+  
+}
+
+
+    });
+                    //  console.log("Columns2"+ arcapi.dataResult().columns()[1].colname());
+                    //  console.log("Columns3"+ arcapi.dataResult().columns()[3].colname());
+
+    
+
+
+};
+
+return f;
+}();
